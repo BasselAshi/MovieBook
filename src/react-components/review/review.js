@@ -57,9 +57,8 @@ class Review extends React.Component {
 
     // Add new comment
     newComment.text = this.state.commentText;
-    console.log(newComment);
     comments.push(newComment);
-    console.log(comments);
+
     this.setState({
       comments: comments,
     });
@@ -76,13 +75,17 @@ class Review extends React.Component {
   render() {
     const { Panel } = Collapse;
     const { TextArea } = Input;
-    const { user, text, rating } = this.props.review;
+    const { user, text, rating, movie } = this.props.review;
 
     const movieTitle = (
       <div>
         <a href="profile" className="username">
-          {user.username}
+          {user.fullName}
         </a>
+        {this.props.showMovie &&
+          <span className="username-review">
+            &nbsp;reviewing <a href="/movie">{movie.title}</a>
+          </span>}
         <Rate
           className="review-rating"
           disabled="true"
@@ -91,6 +94,7 @@ class Review extends React.Component {
         />
       </div>
     );
+
     return (
       <div>
         <Comment

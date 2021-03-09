@@ -5,9 +5,10 @@ import { Route, Switch, BrowserRouter } from "react-router-dom";
 import ProfilePage from "./react-components/profile_page/ProfilePage";
 import HomePage from "./HomePage";
 import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
-import MovieGalleryPage from "./MovieGallery";
-import MoviePage from "./Movie";
+import MovieGallery from "./MovieGallery";
 import Admin from "./react-components/admin_panel/Admin";
+import UserFeed from "./UserFeed";
+import Movie from './Movie'
 
 class App extends React.Component {
   render() {
@@ -19,10 +20,11 @@ class App extends React.Component {
             <Route exact path="/profile" render={() => <ProfilePage />}></Route>
             <Route
               exact
-              path="/movies"
-              render={() => <MovieGalleryPage />}
+              path="/feed"
+              render={() => <UserFeed />}
             ></Route>
-            <Route exact path="/movie" render={() => <MoviePage />}></Route>
+            <Route exact path="/movies" render={() => <MovieGallery />}></Route>
+            <Route exact path="/movie" render={() => <Movie />}></Route>
             <Route exact path="/admin" render={() => <Admin />}></Route>
           </Switch>
         </BrowserRouter>

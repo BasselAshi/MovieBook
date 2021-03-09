@@ -25,7 +25,7 @@ export default function AuthenticatedNavBar({
       <div className="header-menu">
         <MenuTab path="/">Home</MenuTab>
         <MenuTab path="/movies">Movies</MenuTab>
-        <MenuTab path="/movie">Review</MenuTab>
+        <MenuTab path="/feed">Feed</MenuTab>
         {isAdmin && <MenuTab path="/admin">Admin</MenuTab>}
       </div>
       <div className="authed-search-box">
