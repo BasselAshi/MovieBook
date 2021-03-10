@@ -24,6 +24,7 @@ class Review extends React.Component {
 
   componentDidMount() {
     this.setAddComment(true);
+
   }
 
   setAddComment = (value) => {
@@ -76,6 +77,7 @@ class Review extends React.Component {
     const { Panel } = Collapse;
     const { TextArea } = Input;
     const { user, text, rating, movie } = this.props.review;
+    const addCommentsEnabled = this.props.addCommentEnabled && localStorage["user"] != null;
 
     const movieTitle = (
       <div>
@@ -115,7 +117,7 @@ class Review extends React.Component {
                 avatar={comment.user.picture}
               ></Comment>
             ))}
-          {this.state.showComments && this.props.addCommentEnabled && (
+          {this.state.showComments && addCommentsEnabled && (
             <div>
               <Row>
                 <Col span={24}>

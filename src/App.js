@@ -2,11 +2,11 @@ import React from "react";
 import "./App.css";
 // Importing react-router-dom to use the React Router
 import { Route, Switch, BrowserRouter } from "react-router-dom";
-import ProfilePage from "./react-components/profile_page/ProfilePage";
+import ProfilePage from "./ProfilePage";
 import HomePage from "./HomePage";
 import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 import MovieGallery from "./MovieGallery";
-import Admin from "./react-components/admin_panel/Admin";
+import Admin from "./AdminPanel";
 import UserFeed from "./UserFeed";
 import Movie from './Movie'
 
