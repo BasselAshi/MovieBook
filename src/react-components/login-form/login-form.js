@@ -5,7 +5,6 @@ import "./login-form.css";
 import Password from "antd/lib/input/Password";
 import { getUsernamePassword } from "../../models/user";
 
-
 const { TabPane } = Tabs;
 
 class LoginForm extends React.Component {
