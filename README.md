@@ -12,6 +12,7 @@ Here is how to setup the web application and user it.
   - [Logging In](#logging-in)
   - [Looking At Movies](#looking-at-movies)
   - [Viewing Profiles](#viewing-profiles)
+  - [Viewing User Feed](#user-feed)
   - [Administration Panel](#administration-panel-admins-only)
 - [Libraries & Frameworks Used](#libraries--frameworks-used)
 
@@ -53,11 +54,11 @@ To login to the application, here are two sets of credentials
 To login use the credentials provided above,  User are *user* or *admin*
 Enter the credentials in the login form on the home page.  
 
-![Login Form](documentationImages/logging_in/login-form.png)
+![Login Form](documentationImages/logging-in/login-form.png)
 
 Then click on the **Sign In** button
 
-![Sign in Button](documentationImages/logging_in/sign-in-button.png)
+![Sign in Button](documentationImages/logging-in/sign-in-button.png)
 
 If the login in successful you will be authenticated to have access to different pages.
 
@@ -122,6 +123,13 @@ clicking on the button will update the state.
 ![User Profile](documentationImages/profiles/follow-toggle.png)
 
 *Note: the user that will show up is currently random but this will display the user that is clicked once the back-end is implemented*
+
+### Viewing User Feed
+
+User feed displays reviews on movies from users that the authenticated user follows. As shown in the individual movie page,
+users can also add comments to others' reviews.
+
+![User Feed](documentationImages/user-feed/feed.png)
 
 ### Administration Panel **(Admins Only)**
 
