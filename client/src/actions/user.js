@@ -34,8 +34,8 @@ export const login = (loginComp) => {
     const request = new Request(`${API_HOST}/user/login`, {
         method: "post",
         body: JSON.stringify({
-            username: loginComp.state.login.username == '' ? 'bassel65' : loginComp.state.login.username,
-            password: loginComp.state.login.password == '' ? 'hellothere' : loginComp.state.login.password
+            username: loginComp.state.login.username,
+            password: loginComp.state.login.password
         }),
         headers: {
             Accept: "application/json, text/plain, */*",
@@ -117,9 +117,9 @@ export const signup = (signupComp) => {
     const request = new Request(`${API_HOST}/user/register`, {
         method: "post",
         body: JSON.stringify({
-            username: signupComp.state.signup.username === '' ? 'newuser' : signupComp.state.signup.username,
-            password: signupComp.state.signup.password === '' ? 'correctPass' : signupComp.state.signup.password,
-            fullName: signupComp.state.signup.fullName === '' ? 'Default Full Name' : signupComp.state.signup.fullName
+            username: signupComp.state.signup.username,
+            password: signupComp.state.signup.password,
+            fullName: signupComp.state.signup.fullName
         }),
         headers: {
             Accept: "application/json, text/plain, */*",
